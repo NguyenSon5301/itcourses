@@ -1,0 +1,39 @@
+﻿@page
+@using ITCOURSES.Web.Pages.CourseOpeningSchedules
+@using Microsoft.Extensions.Localization
+@using ITCOURSES.Localization
+@using ITCOURSES.Permissions
+@using Microsoft.AspNetCore.Authorization
+@model IndexModel
+@inject IStringLocalizer<ITCOURSESResource> L
+@inject IAuthorizationService AuthorizationService
+@section scripts
+{
+    <abp-script src="/Pages/CourseOpeningSchedules/Index.js" />
+}
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+                <abp-column size-md="_6">
+                    <abp-card-title><b>@L["CourseOpeningSchedules"]</b></abp-card-title>
+                </abp-column>
+                <abp-column size-md="_6" class="text-end">
+                 @if(await AuthorizationService.IsGrantedAsync(ITCOURSESPermissions.CourseOpeningSchedules.Create))
+                 {
+                    <abp-button id="NewCourseOpeningSchedulesButton"
+                                text="@L["NewCourseOpeningSchedules"].Value"
+                                icon="plus"
+                                button-type="Primary"/>
+                 }
+                    <abp-button id="PrintAuthorButton"
+                                text="@L["Print"].Value"
+                                icon="print"
+                                button-type="Primary"/>
+                
+                </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="CourseOpeningSchedulesTable"></abp-table>
+    </abp-card-body>
+</abp-card> 

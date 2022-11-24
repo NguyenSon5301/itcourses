@@ -1,0 +1,19 @@
+﻿@page
+@using ITCOURSES.Localization
+@using ITCOURSES.Web.Pages.Courses
+@using Microsoft.Extensions.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@model CreateModalModel
+@inject IStringLocalizer<ITCOURSESResource> L
+@{
+    Layout = null;
+}
+<abp-dynamic-form abp-model="Course" asp-page="/Courses/CreateModal">
+    <abp-modal>
+        <abp-modal-header title="@L["NewCourse"].Value"></abp-modal-header>
+        <abp-modal-body>
+            <abp-form-content />
+        </abp-modal-body>
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</abp-dynamic-form>

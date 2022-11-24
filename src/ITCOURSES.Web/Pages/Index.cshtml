@@ -1,0 +1,331 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using ITCOURSES.Localization
+@using Volo.Abp.Users
+@model ITCOURSES.Web.Pages.IndexModel
+@inject IHtmlLocalizer<ITCOURSESResource> L
+@inject ICurrentUser CurrentUser
+@section styles {
+<abp-style 
+src="/Pages/Index.css"
+/>
+}
+@section scripts {
+<abp-script src="/Pages/Index.js" />
+}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Moderna Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="~/assets/img/favicon.png" rel="icon">
+  <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  
+  <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="~/assets/css/style.css" rel="stylesheet">
+<div class="container">
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Chào mừng bạn đến với <span>ITCourse</span></h2>
+          <p class="animate__animated animate__fadeInUp">Công nghệ Thông tin là một ngành lớn và quan trọng của Việt Nam, nhưng sự thiếu hụt nhân lực cả về số lượng và chất lượng luôn là một rào cản để phát triển.<br />
+                Nhân lực là mấu chốt quan trọng nhất để thúc đẩy ngành CNTT nước nhà phát triển. Thấu hiểu được tình trạng đó, các nhà sáng lập của ITCourses – vốn xuất thân là các lập trình viên nhiều năm kinh nghiệm, giảng viên, chủ doanh nghiệp phần mềm có tâm huyết – đã quyết định xây dựng nên một mô hình đào tạo lập trình đột phá, giúp nâng cao hiệu quả và chất lượng đào tạo. Không chỉ đủ để đóng góp một số lượng lớn lập trình viên cho ngành, mà còn thông qua đó nâng cao tiêu chuẩn chất lượng của ngành.</p>
+                          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Đọc thêm</a>
+
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">TẦM NHÌN CỦA ITCOURSES</h2>
+          <p class="animate__animated animate__fadeInUp">Trở thành hệ thống đào tạo lập trình hiện đại hàng đầu khu vực, là chủ lực cung cấp nhân lực chất lượng cao cho ngành công nghiệp, góp phần nâng tầm phát triển ngành phần mềm Việt Nam, tiến kịp tiêu chuẩn quốc tế.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">SỨ MỆNH CỦA ITCOURSES</h2>
+          <p class="animate__animated animate__fadeInUp">Phát triển các giải pháp học tập hiện đại và hiệu quả thông qua các mô hình đào tạo tiên tiến trên nền tảng công nghệ giáo dục và sự cộng tác sâu rộng giữa các bên liên quan, đặc biệt là doanh nghiệp. Qua đó, CodeGym giúp người học phát triển tay nghề vững vàng, sẵn sàng làm việc, và có khả năng tự học suốt đời hiệu quả, thích ứng với cuộc Cách mạng Công nghiệp 4.0.</p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">GIÁ TRỊ CỐT LÕI CỦA ITCOURSES</h2>
+          <p class="animate__animated animate__fadeInUp">ITCourses đề cao và theo đuổi những giá trị nền tảng tạo ra môi trường để tất cả mọi người, từ học viên, nhân viên đến các đối tác, cộng sự được truyền cảm hứng, động lực, được chia sẻ chí hướng, được hợp tác và cùng đồng hành để phát triển.</p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">ĐỘI NGŨ CỦA ITCOURSES</h2>
+          <p class="animate__animated animate__fadeInUp">Những con người tử tế, luôn luôn cố gắng để đóng góp được nhiều hơn, mang lại giá trị nhiều hơn cho tổ chức và cho xã hội, luôn tìm thấy được ý nghĩa của công việc mình làm hằng ngày.</p>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2><b>VÌ SAO CHỌN ITCOURSES?</b></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Nắm chắc trong tay nghề nghiệp "hot" nhất thời đại 4.0</a></h4>
+              <p class="description">Bạn đang tìm kiếm một nghề nghiệp ổn định, lương cao, có tương lai phát triển? Với chương trình đào tạo nghề bài bản theo mô hình Coding Bootcamp, ITCourses sẽ đưa bạn từ con số 0 đến với nghề nghiệp mơ ước chỉ trong 20 tuần với chi phí chỉ bằng 1/10 chương trình đào tạo truyền thống. Bạn sẽ có việc làm ngay trong 45 ngày sau khi học xong mà không mất bất kỳ chi phí xin việc nào.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Bất kì ai cũng có thể học được - làm được!</a></h4>
+              <p class="description">Chương trình đào tạo sát với nhu cầu tuyển dụng của doanh nghiệp, lộ trình học tập và huấn luyện được cá nhân hoá đến từng học viên thông qua hệ thống phần mềm học tập hiện đại. Bạn sẽ được các huấn luyện viên và giảng viên hỗ trợ 1-1 trong suốt khóa học để đảm bảo bạn hoàn thành mục tiêu học tập. Bạn có thể học lại hoàn toàn miễn phí cho tới khi làm được việc.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Cam kết 100% có việc làm ngay!</a></h4>
+              <p class="description">ITCourses cam kết hoàn 100% học phí nếu bạn không nhận được việc làm trong vòng 45 ngày kể từ khi tốt nghiệp. Mặc dù hơn 80% học viên không có kinh nghiệm về lập trình trước đó, 100% học viên tốt nghiệp tại ITCourses đều đã đi làm cho các doanh nghiệp phần mềm (FPT Software, NAL, NTQ Solution, Vela Corp, Septeni…) với mức lương khởi điểm trung bình từ 8-12 triệu.</p>
+            </div>
+          </div>
+           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Thời gian học ngắn, tiết kiệm tối đa chi phí</a></h4>
+              <p class="description">Chỉ trong 5 – 6 tháng, bạn đã có ngay một công việc ổn định, tương lai phát triển tốt. Nhờ thời gian học ngắn nên không chỉ tiết kiệm được tiền học phí, học viên còn tối ưu được rất nhiều khoản chi phí sinh hoạt khác. Cũng nhờ đó, bạn sẽ nhanh chóng có thu nhập.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/maxresdefault.jpg" class="img-fluid" alt="">
+            <a href="https://youtu.be/Q2YQbOV2ZNU" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Sự nghiệp bắt đầu ngay từ ngày đầu tiên</a></h4>
+              <p class="description">Ngay từ ngày đầu, học viên sẽ học và được huấn luyện như nhân viên tập sự của ITCourses và phải tuân thủ chặt chẽ các yêu cầu công việc nhằm tạo nền tảng các kỹ năng quan trọng giúp bạn sẵn sàng tham gia vào bất kỳ doanh nghiệp nào sau khi học xong.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Thực chiến: Học thông qua làm</a></h4>
+              <p class="description">Học viên sẽ bắt đầu lập trình ngay từ ngày đầu tiên tại ITCourses. Chương trình đào tạo và lộ trình học tập được cá nhân hoá trong môi trường chuyên nghiệp, sáng tạo, nhịp độ nhanh, thúc đẩy sự hợp tác thông qua lập trình cặp trong các giờ thực hành.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><b>TÌM HIỂU THÊM VỀ SỰ KHÁC BIỆT CỦA ITCOURSES</b></h2>
+          <p>Nhờ áp dụng mô hình học tập mới, học viên của ITCourses dồn toàn bộ nỗ lực vào trong một khoảng thời gian ngắn, do đó rất nhanh chóng nâng cao được năng lực, sớm hoàn thành chương trình học tập và tham gia vào thị trường việc làm. Thay vì mất từ 2 – 5 năm như ở các mô hình truyền thống, mô hình Coding Bootcamp cho phép học viên nhanh chóng vững tay nghề chỉ trong thời gian ngắn chưa đến nửa năm.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3><b>MÔ HÌNH ĐÀO TẠO LẬP TRÌNH ƯU VIỆT</b></h3>
+            <p class="fst-italic">
+             Coding Bootcamp là một mô hình đào tạo lập trình hiệu quả cao giúp học viên nhanh chóng trưởng thành và đạt được trình độ sẵn sàng tham gia ngay vào thị trường việc làm.
+
+               ITCourses là đơn vị đầu tiên áp dụng phương pháp đào tạo Coding Bootcamp tại Việt Nam với các đặc điểm ưu việt:
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Thời gian đào tạo nhanh</li>
+              <li><i class="bi bi-check"></i> Giảm thiểu tối đa chi phí</li>
+              <li><i class="bi bi-check"></i> Nhanh chóng đi làm</li>
+              <li><i class="bi bi-check"></i> Phát triển bền vững lâu dài</li>
+              <li><i class="bi bi-check"></i> Giải pháp việc làm trọn gói</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3><b>THỜI GIAN HỌC NGẮN</b></h3>
+            <p class="fst-italic">
+              Chỉ cần đầu tư nửa năm để bắt đầu một sự nghiệp mới.
+            </p>
+            <p>
+              Nhờ áp dụng mô hình học tập mới, học viên của ITCourses dồn toàn bộ nỗ lực vào trong một khoảng thời gian ngắn, do đó rất nhanh chóng nâng cao được năng lực, sớm hoàn thành chương trình học tập và tham gia vào thị trường việc làm. Thay vì mất từ 2 – 5 năm như ở các mô hình truyền thống, mô hình Coding Bootcamp cho phép học viên nhanh chóng vững tay nghề chỉ trong thời gian ngắn chưa đến nửa năm.
+            </p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3><b>MÔ HÌNH CODING BOOTCAMP LÀ LỰA CHỌN ĐÚNG ĐẮN</b></h3>
+            <p>Riêng ở Mỹ, Coding Bootcamp đã đóng góp tới 1/3 tổng nhân lực của ngành CNTT hằng năm.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> <b>Có hơn 500 Coding Bootcamp</b> trên toàn thế giới, và tốc độ tăng trưởng luôn rất cao, năm 2020 là 150%. </li>
+              <li><i class="bi bi-check"></i> Riêng năm 2019 đã <b>có 23043 người tốt nghiệp</b> từ các Coding Bootcamp, tham gia ngay vào các doanh nghiệp phần mềm.</li>
+              <li><i class="bi bi-check"></i> 83% là một tỉ lệ rất cao khi đặt trong tình trạng có rất nhiều người thất nghiệp như hiện nay. Riêng tại <b>ITCourses tỉ lệ có việc làm là 100%</b>.</li>
+              <li><i class="bi bi-check"></i> Độ dài của các chương trình Coding Bootcamp <b>chỉ từ khoảng 10 – 24 tuần </b> là một lợi thế rất lớn so với các mô hình truyền thống.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3><b>CHI PHÍ ĐẦU TƯ THẤP</b></h3>
+            <p class="fst-italic">
+             Thay vì mua một chiếc xe máy, hãy dành tiền đó để bắt đầu sự nghiệp. Sau 1 năm bạn sẽ có cả 2.
+            </p>
+            <p>
+              Mô hình Coding Bootcamp giúp cho học viên tiết kiệm được rất nhiều chi phí so với các mô hình đào tạo truyền thống. Ngoài khoản học phí rất gọn gàng thì chi phí ăn ở, đi lại, sinh hoạt được giảm thiểu rất đáng kể nhờ thời gian ngắn. Chẳng hạn, nếu phí sinh hoạt hằng tháng của một học viên vào khoảng 3 triệu, thì ở ITCourses học viên chỉ mất tối đa 18 triệu cho chi phí sinh hoạt, trong khi đó, nếu học kéo dài trong 2 năm thì chi phí lên đến 72 triệu, nếu 5 năm thì là 180 triệu.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4><b>Đăng ký nhận thông báo từ chúng tôi</b></h4>
+            <p><i>ITCourses TẶNG BẠN</i></p>
+            <p>Trọn bộ tài liệu học lập trình miễn phí</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Đăng ký">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Địa chỉ</h4>
+            <p>
+              Tầng 10, 295 Nguyễn Tất Thành <br>
+               Phường Thanh Bình, Quận Hải Châu,<br>
+              TP Đà Nẵng <br><br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Mạng xã hội</h3>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Liên hệ chúng tôi</h4>
+            <p>
+              <strong>Hotline:</strong> 0366067051<br>
+              <strong>Email:</strong> info@itcourses.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="credits">   
+        Designed by <a href="https://youtu.be/3an192aq0wQ">Nguyen Son</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="~/assets/vendor/aos/aos.js"></script>
+  <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="~/assets/js/main.js"></script>
+</div>
+
+
